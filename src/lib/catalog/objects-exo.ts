@@ -1,0 +1,196 @@
+import type { CelestialObject } from "./types";
+import { EXOPLANET_ARCHIVE, fact, src } from "./facts";
+
+const archive = src(
+  "NASA Exoplanet Archive",
+  "Planetary Systems composite (IPAC)",
+  EXOPLANET_ARCHIVE,
+);
+
+export const exoObjects: CelestialObject[] = [
+  {
+    slug: "51-pegasi-b",
+    name: "51 Pegasi b",
+    aliases: ["Dimidium", "51 Peg b"],
+    category: "exoplanet",
+    classification: "Hot Jupiter",
+    summary: "The first planet found orbiting a Sun-like star. A gas giant circling its star in about four days.",
+    minute:
+      "Michel Mayor and Didier Queloz announced 51 Pegasi b in 1995, using the radial-velocity wobble of the star. It proved giant planets could orbit far closer than Mercury. The discovery shared the 2019 Nobel Prize in Physics.",
+    understand:
+      "A hot Jupiter is a large planet very close to its star. 51 Pegasi b is not a template for rocky worlds. The radial-velocity method gives a minimum mass, because the tilt of the orbit is usually unknown. The planet does not transit, so its radius is not measured the way a transiting planet’s radius is.",
+    deep:
+      "The star 51 Pegasi is about 50 light-years away in Pegasus and is similar to the Sun. Atmospheric characterization is harder without transits; claims about composition should be checked against a specific paper. Migration — the idea that the planet formed farther out and moved inward — is the standard model, not a filmed history.",
+    facts: [
+      fact("Discovery year", "1995", "verified"),
+      fact("Method", "Radial velocity", "verified"),
+      fact("Orbital period", "4.23 days", "approximate"),
+      fact("Type", "Hot Jupiter", "verified"),
+      fact("Host distance", "about 50 light-years", "approximate"),
+      fact("Radius", "Not available", "candidate", "Does not transit."),
+    ],
+    discovery: "Mayor and Queloz, 1995, Observatoire de Haute-Provence.",
+    structure: "A gas giant. No surface map exists. The globe in the atlas is a colored placeholder.",
+    scale: "Mass is about half of Jupiter’s at minimum. Orbit is much smaller than Mercury’s.",
+    related: ["hd-209458-b", "jupiter", "sun"],
+    sources: [archive, src("Nobel Prize", "Mayor and Queloz, 2019", "https://www.nobelprize.org/prizes/physics/2019/summary/", "2019")],
+    visual: "exoplanet",
+    visualKindLabel: "Placeholder globe — this planet has not been photographed as a resolved disk",
+    metrics: { distanceLy: 50, tempK: 1300 },
+    keywords: ["first exoplanet", "hot jupiter", "mayor queloz"],
+  },
+  {
+    slug: "hd-209458-b",
+    name: "HD 209458 b",
+    aliases: ["Osiris"],
+    category: "exoplanet",
+    classification: "Hot Jupiter",
+    summary: "The first transiting exoplanet with a detected atmosphere. A hot Jupiter that passes in front of its star.",
+    minute:
+      "Because HD 209458 b transits, astronomers can measure its radius and see starlight filtered through its atmosphere. Sodium was reported in 2002, the first atmospheric detection for an exoplanet.",
+    understand:
+      "Transits give radius; radial velocity gives mass; together they give density. This planet is inflated — larger than Jupiter despite being less massive — a common puzzle for hot Jupiters. “Osiris” is an unofficial nickname.",
+    deep:
+      "A hydrogen envelope escaping from the planet has been reported in ultraviolet observations. Escape rates depend on models of the upper atmosphere. The host star is about 159 light-years away. Equilibrium temperature is a calculated quantity, not a thermometer reading of a surface that does not exist.",
+    facts: [
+      fact("Discovery", "Transit found 1999", "verified"),
+      fact("Method", "Transit and radial velocity", "verified"),
+      fact("Period", "3.5 days", "approximate"),
+      fact("Atmosphere", "Sodium and escaping hydrogen reported", "approximate"),
+      fact("Radius", "About 1.4 Jupiter radii", "approximate"),
+    ],
+    discovery: "Transit detected by Henry, Charbonneau, and collaborators, 1999.",
+    structure: "Inflated gas giant with a escaping outer atmosphere. No solid surface.",
+    scale: "Bigger than Jupiter, much closer to its star than Mercury is to the Sun.",
+    related: ["51-pegasi-b", "jupiter"],
+    sources: [archive],
+    visual: "exoplanet",
+    visualKindLabel: "Educational hot-Jupiter globe — not a direct image",
+    metrics: { distanceLy: 159, radiusKm: 1.0e5 },
+  },
+  {
+    slug: "kepler-452b",
+    name: "Kepler-452b",
+    aliases: ["Kepler 452 b"],
+    category: "exoplanet",
+    classification: "Super-Earth candidate rocky/volatile world",
+    summary: "A Kepler planet about 1,800 light-years away, orbiting a Sun-like star in a period close to one Earth year.",
+    minute:
+      "Kepler-452b is often nicknamed Earth’s cousin. That nickname is misleading. It is larger than Earth, its mass is poorly known, and nobody knows whether it is rocky, watery, or wrapped in a thick atmosphere.",
+    understand:
+      "The Kepler mission found it by the transit method. The star is slightly older and more luminous than the Sun. The planet’s orbital period is about 385 days and it receives a bit more starlight than Earth. Being in a habitable zone is a statement about incoming light, not a detection of oceans or life.",
+    deep:
+      "Radius is about 1.6 Earth radii, near a range where many planets keep thick volatile envelopes. Mass has not been measured well enough to fix the composition. NASA announced the planet in 2015. Treat every “most Earth-like” headline as obsolete marketing.",
+    facts: [
+      fact("Discovery year", "2015", "verified"),
+      fact("Method", "Transit (Kepler)", "verified"),
+      fact("Period", "about 385 days", "approximate"),
+      fact("Radius", "about 1.6 Earth radii", "approximate"),
+      fact("Mass", "Not available", "candidate"),
+      fact("Distance", "about 1,800 light-years", "approximate"),
+      fact("Habitable zone", "Receives similar starlight to Earth", "model", "Not a life detection."),
+    ],
+    discovery: "Kepler science team, announced 23 July 2015.",
+    structure: "Unknown. A rocky surface is possible and not confirmed. The atlas does not show continents.",
+    scale: "Super-Earth in radius. Density, which would tell rock from gas, is not established.",
+    related: ["earth", "kepler-186f", "proxima-centauri-b"],
+    sources: [archive, src("NASA", "Exoplanets", "https://science.nasa.gov/exoplanets/")],
+    visual: "exoplanet",
+    visualKindLabel: "Placeholder — surface and composition are unknown",
+    metrics: { distanceLy: 1800, radiusKm: 10200 },
+    keywords: ["earth cousin", "kepler"],
+  },
+  {
+    slug: "kepler-186f",
+    name: "Kepler-186f",
+    aliases: [],
+    category: "exoplanet",
+    classification: "Terrestrial-size planet",
+    summary: "The first Earth-sized planet found in the habitable zone of another star. It orbits a red dwarf.",
+    minute:
+      "Kepler-186f is only slightly larger than Earth and receives less starlight than Earth, from a much cooler star. Size and orbit are known better than mass. Composition is not measured.",
+    understand:
+      "The system has five transiting planets. The star is an M dwarf about 500 light-years away. A planet this small in a temperate orbit was a Kepler milestone in 2014. It is not known to have water, air, or life.",
+    deep:
+      "Radius is about 1.1–1.2 Earth radii. Without a mass, density is unknown; a thin atmosphere and a thick one are both still possible. Red-dwarf habitable zones sit close in, so tidal locking and flares are relevant theoretical concerns, not demonstrated facts for this specific world.",
+    facts: [
+      fact("Discovery year", "2014", "verified"),
+      fact("Method", "Transit", "verified"),
+      fact("Radius", "about 1.2 Earth radii", "approximate"),
+      fact("Mass", "Not available", "candidate"),
+      fact("Star", "Red dwarf", "verified"),
+      fact("Distance", "about 500 light-years", "approximate"),
+    ],
+    discovery: "Kepler team, announced 2014.",
+    structure: "Unknown. Shown as a plain small world on purpose.",
+    scale: "The closest radius match to Earth in this curated set. Still not a second Earth.",
+    related: ["earth", "kepler-452b", "trappist-1e"],
+    sources: [archive],
+    visual: "earth",
+    visualKindLabel: "Placeholder Earth-sized globe — continents are not known and are not drawn as data",
+    metrics: { distanceLy: 580, radiusKm: 7400 },
+  },
+  {
+    slug: "proxima-centauri-b",
+    name: "Proxima Centauri b",
+    aliases: ["Proxima b"],
+    category: "exoplanet",
+    classification: "Terrestrial-mass planet candidate environment",
+    summary: "A planet of at least 1.3 Earth masses orbiting the nearest star, inside the conventional habitable zone.",
+    minute:
+      "Proxima b was found in 2016 by radial velocity. It orbits Proxima Centauri every 11 days. It does not transit, so its size and atmosphere are unknown. No life has been detected.",
+    understand:
+      "Minimum mass is a little above Earth’s. The true mass is higher if we do not see the orbit edge-on. The star flares strongly. Whether an atmosphere survives is an open question studied with models and, increasingly, with telescope time — not a settled no or yes.",
+    deep:
+      "Equilibrium temperature depends on the unknown albedo and atmosphere. Publishing a single surface temperature would be fiction. Distance is the same as the star’s, 4.24 light-years, which makes this the nearest known exoplanet. Additional candidates in the system have been proposed; confirmation status changes, so this entry does not list them as confirmed.",
+    facts: [
+      fact("Discovery year", "2016", "verified"),
+      fact("Method", "Radial velocity", "verified"),
+      fact("Minimum mass", "about 1.3 Earth masses", "approximate"),
+      fact("Period", "11.2 days", "approximate"),
+      fact("Radius", "Not available", "candidate", "No transit detected."),
+      fact("Distance", "4.24 light-years", "verified"),
+    ],
+    discovery: "Guillem Anglada-Escudé and the Pale Red Dot campaign, 2016.",
+    structure: "Unknown. A rocky planet is plausible given the mass and is not proven.",
+    scale: "The nearest known exoplanet. Still 4.24 years away at the speed of light.",
+    related: ["proxima-centauri", "earth", "trappist-1e"],
+    sources: [archive],
+    visual: "exoplanet",
+    visualKindLabel: "Placeholder — no resolved image and no measured radius",
+    metrics: { distanceLy: 4.24 },
+    keywords: ["nearest exoplanet", "proxima b"],
+  },
+  {
+    slug: "trappist-1e",
+    name: "TRAPPIST-1e",
+    aliases: ["TRAPPIST-1 e"],
+    category: "exoplanet",
+    classification: "Terrestrial-size planet in a compact system",
+    summary: "One of seven Earth-sized worlds orbiting the ultracool dwarf TRAPPIST-1, about 40 light-years away.",
+    minute:
+      "The TRAPPIST-1 system is a chain of small transiting planets in resonance. Planet e orbits in the star’s habitable zone. That does not mean it is habitable.",
+    understand:
+      "Seven planets were confirmed in 2017 after a ground-based discovery of three in 2016. They are all close to the star; the whole system would fit well inside Mercury’s orbit. Densities suggest rocky worlds, some possibly with water, but the water inventories are model-dependent.",
+    deep:
+      "James Webb is measuring atmospheres, and early results have ruled out some thick hydrogen envelopes for inner planets. A detection of a particular gas is not automatically a biosignature. TRAPPIST-1 is an active small star. Planet e’s radius is about 0.9 Earth radii and its mass is known more precisely than Kepler-452b’s because the system is so rich in transits and timing.",
+    facts: [
+      fact("Discovery context", "System announced 2016–2017", "verified"),
+      fact("Method", "Transit", "verified"),
+      fact("Radius", "about 0.92 Earth radii", "approximate"),
+      fact("Period", "about 6.1 days", "approximate"),
+      fact("Host", "Ultracool red dwarf", "verified"),
+      fact("Distance", "about 40 light-years", "approximate"),
+      fact("Life", "Not detected", "verified"),
+    ],
+    discovery: "TRAPPIST and Spitzer teams; seven-planet announcement in 2017 led by Michaël Gillon.",
+    structure: "Likely rocky. Atmosphere unknown. No map.",
+    scale: "One of the best nearby laboratories for rocky exoplanets. Still not a place we have imaged.",
+    related: ["proxima-centauri-b", "kepler-186f", "earth"],
+    sources: [archive, src("NASA", "Exoplanets", "https://science.nasa.gov/exoplanets/")],
+    visual: "exoplanet",
+    visualKindLabel: "Placeholder rocky world — surface unknown",
+    metrics: { distanceLy: 40, radiusKm: 5860 },
+    keywords: ["trappist", "seven planets"],
+  },
+];

@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-void: #050607;
+  --color-midnight: #101216;
+  --color-graphite: #171a20;
+  --color-ink: #f5f3ee;
+  --color-mist: #a1a6b1;
+  --color-solar: #ff653e;
+  --color-amber: #ffb86b;
+  --color-cyan: #79d8ff;
+  --color-violet: #9d8bff;
+  --color-line: #2a2e36;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --radius-sm: 2px;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-void);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--color-void);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--color-solar);
+    color: var(--color-void);
+  }
+}
+
+.stage {
+  height: 70svh;
+  min-height: 26rem;
+}
+
+.hero-copy {
+  text-shadow: 0 1px 18px rgba(5, 6, 7, 0.72);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

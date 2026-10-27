@@ -1,0 +1,206 @@
+import type { CelestialObject } from "./types";
+import { NASA_UNIVERSE, fact, src } from "./facts";
+
+export const starObjects: CelestialObject[] = [
+  {
+    slug: "proxima-centauri",
+    name: "Proxima Centauri",
+    aliases: ["Proxima", "Alpha Centauri C"],
+    category: "star",
+    classification: "M5.5 red dwarf",
+    summary: "The closest known star to the Sun, a small red dwarf in the Alpha Centauri system.",
+    minute:
+      "Proxima is about 4.24 light-years away. It is much cooler and fainter than the Sun and is not visible to the unaided eye. At least one planet, Proxima Centauri b, orbits in a zone where liquid water might be possible under the right atmosphere.",
+    understand:
+      "Red dwarfs fuse hydrogen slowly and can live for trillions of years in models. They also flare. Proxima is gravitationally associated with Alpha Centauri A and B, a pair of Sun-like stars a little farther away. Distance is known precisely from parallax.",
+    deep:
+      "A habitable-zone orbit around a flare star is not a detection of habitability. Proxima b’s mass is a minimum mass from radial velocity; its radius and atmosphere are not established. Additional planet candidates have been discussed and should be checked against the current NASA Exoplanet Archive before being treated as confirmed.",
+    facts: [
+      fact("Distance", "4.24 light-years", "verified"),
+      fact("Type", "Red dwarf, about 0.12 solar masses", "approximate"),
+      fact("Visibility", "Not visible to the unaided eye", "verified"),
+      fact("Known planet", "Proxima Centauri b", "verified"),
+    ],
+    discovery: "Robert Innes, 1915, at the Union Observatory in Johannesburg.",
+    structure: "A fully convective low-mass star in standard models. Interiors are not observed directly.",
+    scale: "About one-seventh the Sun’s radius. The nearest star is still more than 40 trillion kilometers away.",
+    related: ["sun", "proxima-centauri-b", "sirius-a"],
+    sources: [src("NASA", "Universe", NASA_UNIVERSE), src("NASA Exoplanet Archive", "Confirmed planets", "https://exoplanetarchive.ipac.caltech.edu/")],
+    visual: "star",
+    visualKindLabel: "Educational red-dwarf globe — stars are not resolved as surfaces except the Sun",
+    metrics: { radiusKm: 1.0e5, massKg: 2.4e29, tempK: 3000, distanceLy: 4.24 },
+    keywords: ["nearest star", "closest star", "alpha centauri"],
+  },
+  {
+    slug: "sirius-a",
+    name: "Sirius A",
+    aliases: ["Sirius", "Alpha Canis Majoris"],
+    category: "star",
+    classification: "A1V main-sequence star",
+    summary: "The brightest star in the night sky. A hot white star with a famous white-dwarf companion, Sirius B.",
+    minute:
+      "Sirius looks bright because it is luminous and relatively nearby, about 8.6 light-years away. The faint companion is a white dwarf, the core left after a star like the Sun dies.",
+    understand:
+      "Friedrich Bessel inferred an unseen companion from Sirius’s wobble. Alvan Graham Clark saw Sirius B in 1862. White dwarfs are Earth-sized and extremely dense. Sirius B does not fuse; it cools over billions of years.",
+    deep:
+      "Sirius A is roughly twice the Sun’s mass and about 25 times as luminous. Those are rounded catalog values. The pair’s orbit is about 50 years. “Dog Star” is a cultural name, not a second physical object.",
+    facts: [
+      fact("Distance", "8.6 light-years", "approximate"),
+      fact("Night-sky rank", "Brightest star as seen from Earth", "verified"),
+      fact("Companion", "Sirius B, a white dwarf", "verified"),
+      fact("Spectral type", "A1V", "verified"),
+    ],
+    discovery: "Known since antiquity. The companion was predicted in 1844 and seen in 1862.",
+    structure: "Sirius A is a main-sequence star with a radiative envelope. Sirius B is a degenerate stellar remnant.",
+    scale: "Sirius A is larger and hotter than the Sun. Sirius B is about Earth-sized despite a mass near the Sun’s.",
+    related: ["sun", "proxima-centauri", "vega"],
+    sources: [src("NASA", "Universe", NASA_UNIVERSE)],
+    visual: "star",
+    visualKindLabel: "Educational stellar sphere — Sirius is a point of light in ordinary telescopes",
+    metrics: { radiusKm: 1.2e6, tempK: 9940, distanceLy: 8.6 },
+    keywords: ["brightest star", "dog star"],
+  },
+  {
+    slug: "betelgeuse",
+    name: "Betelgeuse",
+    aliases: ["Alpha Orionis"],
+    category: "star",
+    classification: "Red supergiant",
+    summary: "A red supergiant in Orion, large enough and near enough that interferometers can resolve its disk.",
+    minute:
+      "Betelgeuse is a massive star near the end of its life. It has swollen and cooled. It will eventually explode as a supernova, but “eventually” in stellar terms is not a date we can put on a calendar.",
+    understand:
+      "Distance estimates cluster around a few hundred to perhaps 600 light-years; the uncertainty is real and affects the inferred size and luminosity. The star varies in brightness. The dimming of 2019–2020 is explained largely by dust and pulsation, not by an imminent explosion.",
+    deep:
+      "A star of Betelgeuse’s mass is expected to leave a neutron star or possibly a black hole after core collapse. Which remnant, and how much mass it will have lost, depends on models. There is no observational sign that core collapse is underway now.",
+    facts: [
+      fact("Type", "Red supergiant", "verified"),
+      fact("Distance", "A few hundred light-years", "approximate", "Published estimates differ."),
+      fact("Fate", "Core-collapse supernova", "model", "Timescale is uncertain by a large factor."),
+      fact("Resolved disk", "Yes, by interferometry", "verified"),
+    ],
+    discovery: "Known since antiquity as the shoulder of Orion.",
+    structure: "An extended, convective envelope around a hot core that is no longer burning only hydrogen. Interior layers are theoretical.",
+    scale: "If placed at the Sun, the star would engulf the inner planets. The exact radius moves as the star pulsates, so a single number would overstate precision.",
+    related: ["rigel", "sun", "crab-pulsar"],
+    sources: [src("NASA", "Universe", NASA_UNIVERSE)],
+    visual: "red-giant",
+    visualKindLabel: "Educational supergiant — radius is deliberately not shown to a false precision",
+    metrics: { tempK: 3600, distanceLy: 550 },
+    keywords: ["supernova", "orion"],
+  },
+  {
+    slug: "rigel",
+    name: "Rigel",
+    aliases: ["Beta Orionis"],
+    category: "star",
+    classification: "Blue supergiant",
+    summary: "A luminous blue supergiant marking Orion’s foot. Far brighter than the Sun and much farther than Sirius.",
+    minute:
+      "Rigel looks bright even though it is hundreds of light-years away, because it is extremely luminous. It is a massive star burning fuel quickly.",
+    understand:
+      "Blue supergiants are hot and short-lived. Rigel is multiple: the bright star has fainter companions. Distance and therefore luminosity remain somewhat uncertain, as with many bright supergiants.",
+    deep:
+      "Massive stars return enriched gas to space through winds and, later, supernovae. Rigel itself has not exploded. Evolutionary tracks depend on rotation, mass loss, and whether the star is in a interacting binary.",
+    facts: [
+      fact("Type", "Blue supergiant, B8", "approximate"),
+      fact("Distance", "Hundreds of light-years", "approximate"),
+      fact("Role in the sky", "Brightest star in Orion", "verified", "Usually; Betelgeuse can rival it when bright."),
+    ],
+    discovery: "Known since antiquity.",
+    structure: "Hot massive star with a strong wind. The preview is a smooth blue sphere, which hides the unresolved wind.",
+    scale: "Tens of solar radii, not hundreds like a red supergiant. Hotter, not larger in the same way as Betelgeuse.",
+    related: ["betelgeuse", "vega", "sun"],
+    sources: [src("NASA", "Universe", NASA_UNIVERSE)],
+    visual: "star",
+    visualKindLabel: "Educational blue-star sphere",
+    metrics: { tempK: 12000, distanceLy: 860 },
+  },
+  {
+    slug: "vega",
+    name: "Vega",
+    aliases: ["Alpha Lyrae"],
+    category: "star",
+    classification: "A0V star",
+    summary: "A bright standard star in Lyra, once the calibration zero-point for the magnitude system, and a rapid rotator.",
+    minute:
+      "Vega is about 25 light-years away and appears blue-white. It rotates so fast that it is flattened and cooler at the equator than at the poles.",
+    understand:
+      "Because Vega is seen nearly pole-on, that temperature difference is easy to miss. A debris disk of dust surrounds it — material left from planet formation, not a photographed planetary system of known worlds. No confirmed planet is required to explain the disk.",
+    deep:
+      "Vega was the northern pole star around 12,000 BCE and will be again in about 12,000 years because of precession. That is a change in Earth’s spin axis, not a motion of Vega onto the pole by its own orbit alone.",
+    facts: [
+      fact("Distance", "25 light-years", "approximate"),
+      fact("Spectral type", "A0V", "verified"),
+      fact("Rotation", "Very rapid; gravity-darkened", "verified"),
+      fact("Debris disk", "Detected", "verified"),
+    ],
+    discovery: "Known since antiquity.",
+    structure: "Main-sequence star with an equatorial bulge. Debris dust orbits outside the star.",
+    scale: "A little over twice the Sun’s diameter, and more luminous.",
+    related: ["sirius-a", "sun", "polaris"],
+    sources: [src("NASA", "Universe", NASA_UNIVERSE)],
+    visual: "star",
+    visualKindLabel: "Educational stellar sphere",
+    metrics: { radiusKm: 1.6e6, tempK: 9600, distanceLy: 25 },
+  },
+  {
+    slug: "polaris",
+    name: "Polaris",
+    aliases: ["North Star", "Alpha Ursae Minoris"],
+    category: "star",
+    classification: "Yellow supergiant, Cepheid variable",
+    summary: "The present northern pole star. A multiple system whose brightest member is a Cepheid variable.",
+    minute:
+      "Polaris sits close to the north celestial pole, so it barely moves in the night sky as Earth turns. It is not the brightest star. It will not always be the pole star.",
+    understand:
+      "Precession slowly moves the celestial pole. Polaris is a useful marker now, within about a degree of the pole, and that offset changes. The star is a Cepheid, so its pulsation is tied to luminosity — the same class of stars used to measure distances to nearby galaxies.",
+    deep:
+      "The distance to Polaris has a complicated measurement history because it is bright and multiple. Quoted distances around 340–450 light-years appear in the literature; treat a single figure as approximate. The system includes Polaris Ab and the wider companion Polaris B.",
+    facts: [
+      fact("Role", "Current northern pole star", "verified"),
+      fact("Variability", "Cepheid", "verified"),
+      fact("Distance", "A few hundred light-years", "approximate"),
+      fact("Permanence", "Not a permanent pole star", "verified"),
+    ],
+    discovery: "Known since antiquity. Its importance as a pole star is a fact about Earth’s axis.",
+    structure: "Evolved pulsating supergiant with companions. The 3D view shows one glowing star for orientation, not the whole hierarchy.",
+    scale: "Much larger and more luminous than the Sun, far more distant than Vega.",
+    related: ["vega", "sun", "andromeda-galaxy"],
+    sources: [src("NASA", "Universe", NASA_UNIVERSE)],
+    visual: "star",
+    visualKindLabel: "Educational stellar sphere",
+    metrics: { distanceLy: 400, tempK: 6000 },
+    keywords: ["north star", "pole star"],
+  },
+  {
+    slug: "crab-pulsar",
+    name: "Crab Pulsar",
+    aliases: ["PSR B0531+21", "NP 0532"],
+    category: "extreme",
+    classification: "Pulsar / neutron star",
+    catalogId: "PSR B0531+21",
+    summary: "The neutron star at the heart of the Crab Nebula, spinning about 30 times a second and flashing across the spectrum.",
+    minute:
+      "When a massive star’s core collapses, it can leave a city-sized neutron star. The Crab Pulsar is that remnant for the supernova recorded in 1054.",
+    understand:
+      "The pulses are beams of radiation swept past Earth, like a lighthouse, not the star blinking on and off as a whole. The spin is slowing as the pulsar loses energy, and that energy lights the nebula. Jocelyn Bell Burnell discovered the first pulsar in 1967; the Crab pulsar was identified soon after as the remnant of SN 1054.",
+    deep:
+      "Neutron-star radii are about 12 km and masses about 1–2 solar masses, from a combination of theory and observations of many pulsars. A single radius for the Crab Pulsar is not measured the way a planet’s radius is. The interior equation of state is an open problem in nuclear physics. Magnetars are a more magnetic subclass, not a description of every pulsar.",
+    facts: [
+      fact("Spin", "about 30 times per second", "approximate"),
+      fact("Associated supernova", "SN 1054", "verified"),
+      fact("Host nebula", "Crab Nebula", "verified"),
+      fact("Size", "City-scale, not directly imaged", "model"),
+    ],
+    discovery: "Pulsed emission identified in 1968 by several groups, linked to the Crab Nebula.",
+    structure: "A neutron star: possible exotic core, nuclear-density interior, thin solid crust, magnetosphere. Any cutaway is a model.",
+    scale: "A few kilometers of neutron-star material outweigh a mountain. The comparison is about density, not a photograph.",
+    related: ["crab-nebula", "betelgeuse", "cygnus-x-1"],
+    sources: [src("NASA", "Universe", NASA_UNIVERSE), src("NASA", "Crab Nebula", "https://science.nasa.gov/universe/")],
+    visual: "neutron",
+    visualKindLabel: "Schematic neutron star with beams — the surface has not been imaged",
+    metrics: { radiusKm: 12, massKg: 2.8e30, distanceLy: 6500 },
+    keywords: ["neutron star", "pulsar"],
+  },
+];

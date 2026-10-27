@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "COSMOS ATLAS",
+      "hasCanvas": false,
+      "bodyTextLen": 5617,
+      "bodyTextHash": "1c9cdfdf2b56c9b9ad6cabf1072e99c2a12a04bf4952b0c0b7d9dee2e37bbaac",
+      "bodyTextPrefix": "Skip to content COSMOS ATLAS The story Explore Catalog Solar Sys",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "COSMOS ATLAS",
+      "hasCanvas": false,
+      "bodyTextLen": 5544,
+      "bodyTextHash": "d63989f4f0d2f743c5e6be8d1706f147a170946dd91dbef174d559e402f2c982",
+      "bodyTextPrefix": "Skip to content COSMOS ATLAS Menu Preparing the 3D view. The tex",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
